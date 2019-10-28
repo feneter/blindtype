@@ -15,6 +15,10 @@ class Canvas(QWidget):
     It performs manipulations on the exercise by updating progress,
     indicating what the user has typed and updates how many successes or
     failure the user makes
+
+    We implement the main keyPressEvent here to capture all key strokes and process accordingly.
+
+    
     """
 
     def __init__(self, exercise):

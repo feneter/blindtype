@@ -6,7 +6,9 @@ class Exercise:
     - Part of the domain
 
     - An exercise should keep its own state including passes, percentage score, etc
-    - This class shouldn't know anything about a widget  
+    - This class shouldn't know anything about a widget
+    - This exercise is assignable to a person, so they can keep track of the progress they make for 
+      particular exercises.
     """
     def __init__(self, name, text):
         self.name = name
