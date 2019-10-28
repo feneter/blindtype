@@ -1,6 +1,6 @@
 import sys
 
-from PyQt5.QtWidgets import QWidget, QLabel, QTextEdit, QVBoxLayout
+from PyQt5.QtWidgets import QWidget, QLabel, QTextEdit, QVBoxLayout, QLabel
 from PyQt5.Qt import QApplication
 from PyQt5.QtCore import Qt
 
@@ -27,7 +27,7 @@ class Canvas(QWidget):
         layout = QVBoxLayout()
 
         
-        self.text_viewer = QTextEdit(self)
+        self.text_viewer = QTextEdit(self) # QTextEdit allows for rich text editing.
         self.typing_area = QTextEdit(self)
         self.text_viewer.setReadOnly(True)
         self.typing_area.setReadOnly(True)
@@ -36,6 +36,7 @@ class Canvas(QWidget):
         self.typing_area.show()
         layout.addWidget(self.text_viewer)
         layout.addWidget(self.typing_area)
+        layout.addWidget(QLabel("Click here to get started"))
         self.setLayout(layout)
     
     def keyPressEvent(self, key_event):
